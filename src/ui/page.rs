@@ -15,7 +15,7 @@ impl Default for MrEditor {
 }
 
 impl eframe::App for MrEditor {
-    fn update(&mut self, ctx: &egui::Context, frame: &mut eframe::Frame) {
+    fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
         egui::CentralPanel::default().show(ctx, |ui| {
             self.editor.show(ui);   
         });
