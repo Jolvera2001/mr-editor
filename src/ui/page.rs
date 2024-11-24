@@ -3,14 +3,12 @@ use eframe::egui;
 use super::editor::Editor;
 
 pub struct MrEditor {
-    preview: bool,
     editor: Editor
 }
 
 impl Default for MrEditor {
     fn default() -> Self {
         Self {
-           preview: false, 
            editor: Editor::default(),
         }
     }

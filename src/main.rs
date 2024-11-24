@@ -14,7 +14,7 @@ fn main() -> Result<(), eframe::Error> {
     eframe::run_native(
         "My Todo List",
         options, 
-        Box::new(|cc| {
+        Box::new(|_cc| {
             Ok(Box::new(MrEditor::default()))
         }),
     )
