@@ -1,0 +1,11 @@
+[package]
+name = "mr-editor"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+eframe = "0.29.1"
+markdown = "0.3.0"
+syntect = "5.2.0"
+rsqlite = "1.0.0"
+rfd = "0.15.1"
