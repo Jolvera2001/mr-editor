@@ -1,13 +1,16 @@
 use eframe::egui;
+use egui_commonmark::{CommonMarkCache, CommonMarkViewer};
 
 pub struct Editor {
     content: String,
+    md_cache: CommonMarkCache,
 }
 
 impl Editor {
     pub fn default() -> Self {
         Self {
             content: String::new(),
+            md_cache: CommonMarkCache::default(),
         }
     }
     pub fn show(&mut self, ui: &mut egui::Ui) {
@@ -25,6 +28,7 @@ impl Editor {
                 egui::Layout::top_down(egui::Align::LEFT), 
                 |ui| {
                     egui::ScrollArea::vertical().show(ui, |ui| {
+                        CommonMarkViewer::new().show(ui, &mut self.md_cache, &self.content)
                     })
                 })
         });   
